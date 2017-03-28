@@ -1,0 +1,27 @@
+/* Font */
+$font-main: 'Montserrat', sans-serif;
+$font-code: Menlo, Monaco, Consolas, "Courier New", monospace;
+
+$font-extra-light: 200;
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-bold: 700;
+
+/* Column */
+
+/* Spacing */
+$spacing-generic: 10px!default;
+
+/* Borders */
+$border-primary: 1px solid $brand-grey!default;
+$border-color: $brand-grey!default;
+
+$radius-default: 3px!default;
+
+/* Buttons */
+$btn-primary-text: $brand-white!default;
+$btn-primary-background: $brand-blue!default;
+
+$btn-second-text: $brand-grey-dark!default;
+$btn-second-border: 1px solid $brand-grey!default;

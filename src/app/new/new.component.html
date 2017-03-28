@@ -1,0 +1,27 @@
+<div class="row">
+	<div class="col">
+		<h2 class="page-title" [innerHtml]="title"></h2>
+
+		<div class="alert success" *ngIf="added">You have added an item</div>
+
+		<form class="add-form" novalidate #form="ngForm">
+			<label>Name</label>
+			<input type="text" name="name" required autocomplete="off" 
+				#name="ngModel" 
+				[(ngModel)]="model.title" 
+				(focus)="resetForm(form.submitted)" />
+
+<!-- 			<label>Number <span>{{ reps.value }}</span></label>
+			<input type="range" name="reps" min="1" max="6" 
+				#reps="ngModel" 
+				[(ngModel)]="model.amount" 
+				(focus)="resetForm(form.submitted)" /> -->
+
+			<button class="btn btn-primary" type="submit" (click)="addItem(model)" [disabled]="form.invalid">
+				<!-- <svg><use xlink:href="../../assets/icons/icons.svg#i-add"></use></svg> -->
+				Add
+			</button>
+		</form>
+	</div>
+	<button class="btn btn-secondary" routerLink="/home">Back</button>
+</div>

@@ -1,0 +1,23 @@
+<header [class.open]="menuOpen">
+	<button class="btn-menu" aria-expanded="false" (click)="toggleMenu()">
+		<span class="screen-reader-text">Menu</span>
+		<svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100">
+			<g>
+				<path class="bar" d="M5 13h90v12H5z"/>
+				<path class="bar" d="M5 43h90v12H5z"/>
+				<path class="bar" d="M5 73h90v12H5z"/>
+			</g>
+		</svg>
+	</button>
+
+	<nav>
+		<ul>
+			<li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+			<li><a routerLink="/new" routerLinkActive="active">New</a></li>
+		</ul>
+	</nav>
+</header>
+
+<div class="container">
+	<router-outlet></router-outlet>
+</div>

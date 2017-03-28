@@ -1,0 +1,27 @@
+<h1>{{ title }}</h1>
+<div class="row">
+	<div class="alert warning" *ngIf="!logged.length">You have no items</div>
+	<div class="col">
+		<div class="item" *ngFor="let log of logged; let i=index">
+			<div class="content">
+				<h2>{{log.title}}</h2>
+				<div class="details">{{log.details}}</div>
+				<p class="date">Updated: <span>{{log.updated | date:'medium'}}</span></p>
+			</div>
+
+			<div class="actions">
+				<button class="btn btn-secondary btn-delete" (click)="deleteItem(i)">
+					<svg><use xlink:href="../../assets/icons/icons.svg#i-delete"></use></svg>
+				</button>
+				<button class="btn btn-secondary btn-edit" (click)="editItem(i)" [routerLink]="['/edit', log.id]">
+					<svg><use xlink:href="../../assets/icons/icons.svg#i-edit"></use></svg>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<button class="btn btn-primary" routerLink="/new">
+		<!-- <svg><use xlink:href="../../assets/icons/icons.svg#i-add"></use></svg> -->
+		Add
+	</button>
+</div>
