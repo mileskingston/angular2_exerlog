@@ -13,9 +13,9 @@ export class LogService {
   	return Logged;
   }
 
-  addItem(data) {
-    data.id = Logged.length + 1;
-  	Logged.push(data);
+  addItem(model) {
+    model.id = Logged.length + 1;
+  	Logged.push(model);
   	return Logged;
   }
 
